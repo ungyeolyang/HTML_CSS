@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+
+footer{
+  background-color: #171717;
+  padding: 40px;
+  color: #787778;
+}
+footer p{}
+footer > select{
+  appearance: none;
+  background-color: #080808;
+  color: #787778;
+  border: none;
+}
+
+footer > select  option{
+  border-bottom:1px solid #787778 ;
+}
+
+footer > a > h1{
+  color: #fff;
+}
+
+footer > table{
+  border-collapse: collapse;
+}
+
+footer > table td{
+  border: 1px solid #fff;
+  border-bottom: none;
+  border-top: none;
+  padding: 0 20px;
+}
+
+footer > table td:first-child {
+  border-left: none; 
+}
+
+footer > table td:last-child {
+  border-right: none; 
+}

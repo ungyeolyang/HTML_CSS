@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼</title>
+  <style>
+    img{
+      width: 30px;
+    }
+    button{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <button type="menu"><img src="./image/bear.png" alt="곰그림">곰</button>
+  <input type="button" value="버튼">
+  <hr>
+  <p>disabled</p>
+  <input type="text" disabled>
+  <button type="button" disabled>비활성</button>
+  <hr>
+  <p>readonly</p>
+  <input type="text" readonly>
+  <textarea readonly></textarea>
+  <hr>
+  <p>maxlength</p>
+  <input type="url" maxlength="4">
+  <textarea maxlength="4"></textarea>
+  <hr>
+  <p>placeholder</p>
+  <input type="tel" placeholder="전화번호를 입력해 주세요.">
+</body>
+</html>

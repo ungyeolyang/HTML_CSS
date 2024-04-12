@@ -3,44 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>지원서</title>
   <style>
-    body{
+    .container {
       width: 525px;
-      border: 2px solid black;
+      border: 1px solid black;
       padding: 20px 30px;
+      margin: auto;
+    }
+    .title{
+      text-align: center;
+    }
+    .detail{
+      margin: 4px 40px;
+    }
+    label[for ="name"], [for="tel"]{
+      width: 60px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <h1>프론트앤드 개발자 지원서</h1>
-  <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
-  <hr>
-  <form action="#">
-  <p><b>개인정보</b></p>
-  <blockquote>
-    <label for="name">이름 <input type="text" id="name" placeholder="공백없이 입력하세요">
-      <br>
-      </label><label for="tel">연락처
-      <input type="tel" id="tel">
-      </label>
-  </blockquote>
-  <p><b>지원분야</b></p>
-  <blockquote>
-    <input type="radio" name="jobs" id="pub"  value="웹퍼블리싱">
-    <label for="pub">웹퍼블리싱</label>
-    <br>
-    <input type="radio" name="jobs" id="front"  value="웹 프론트앤드">
-    <label for="front">웹 프론트앤드</label>
-    <br>
-    <input type="radio" name="jobs" id="mob"  value="모바일 앱">
-    <label for="front">모바일 앱</label>
-  </blockquote>
-  <p><b>지원동기</b></p>
-  <textarea name="" id="" cols="70" rows="5"></textarea>
-  <br>
-  <input type="button" value="접수하기">
-  <input type="reset" value="다시쓰기">
+  <div class ="container">
+    <h1 class ="title">프론트앤드 개발자 지원서</h1>
+    <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <form action="#">
+      <p><b>개인정보</b></p>
+      <!-- <blockquote> -->
+      <div class="detail">
+        <label for="name">이름</label>
+         <input type="text" id="name" placeholder="공백없이 입력하세요">
+        <br>
+        <label for="tel">연락처</label>
+        <input type="tel" id="tel">
+      </div>
+      <!-- </blockquote> -->
+      <p><b>지원분야</b></p>
+      <div class="detail">
+        <!-- <blockquote> -->
+          <input type="radio" name="jobs" id="pub"  value="웹퍼블리싱">
+          <label for="pub">웹퍼블리싱</label>
+          <br>
+          <input type="radio" name="jobs" id="front"  value="웹 프론트앤드">
+          <label for="front">웹 프론트앤드</label>
+          <br>
+          <input type="radio" name="jobs" id="mob"  value="모바일 앱">
+          <label for="mob">모바일 앱</label>
+      </div>
+      <!-- </blockquote> -->
+      <p><b>지원동기</b></p>
+        <textarea name="" id="" cols="70" rows="5"></textarea>
+        <br>
+      <!-- <input type="button" value="접수하기"> -->
+    <button type="submit">접수하기</button>
+    <!-- <input type="reset" value="다시쓰기"> -->
+    <button type="reset">다시쓰기</button>
 </form>
+</div>
 </body>
 </html>

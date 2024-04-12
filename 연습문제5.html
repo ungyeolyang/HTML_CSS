@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제5</title>
+  <style>
+    label{
+      width: 90px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    div{
+      margin: 5px;
+    }
+    .box{
+      margin: 0;
+    } 
+    .box input{
+      width: 360px;
+    }
+    input{
+      width: 140px;
+    }
+    .container{
+      width: 800px;
+      margin: 0 auto;
+    }
+    .button_group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .button_group button{
+      /* margin: 10px 10px; */
+      padding: 10px 40px;
+      font-weight: bold;
+      border: gray;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>아이패드 주문하기</h1>
+   <fieldset>
+    <legend><b>배송 정보</b></legend>
+    <div class="box">
+      <div>
+        <label for="goods">주문상품</label>
+        <input style="font-weight: bold;" type="text" id="goods" value="아이패드 12.9 인치" readonly>
+      </div>
+      <div>
+        <label for="name">이름</label>
+       <input type="text" id="name">
+      </div>  
+      <div>
+       <label for="adr">배송 주소</label>
+       <input type="text" id="adr" required>
+      </div>
+      <div>
+       <label for="email">이메일</label>
+        <input type="email" id="email">
+      </div>
+     <div>
+        <label for="tel">연락처</label>
+        <input type="tel" id="tel" placeholder="하이픈 뺴고 입력해 주세요(01012345678)">
+    </div>
+    <div>
+      <label for="date">배송 지정</label>
+      <input style="font-weight: bold;" type="date" id="date">
+      <span style="font-size: small; font-weight: bold;">(주문일로부터 최소 3일 이후)</span>
+    </div>
+  </div>
+  </fieldset>
+  <div class="button_group">
+    <button type="submit">주문하기</button>
+    <button type="submit">취소하기</button>
+  </div>
+</body>
+</html>

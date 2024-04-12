@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      color: red;
+    }
+    div{
+      background-color: royalblue;
+      columns: white;
+    }
+    .accent{
+      border: 1px solid #000;
+      padding: 5px;
+    }
+    .bg{
+      background-color: white;
+    }
+    a[href] {
+      color: red;
+      text-decoration: none;
+    }
+    a[target="_blank"]{
+      color: blue;
+    }
+    .custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding: 8px 30px 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.custom-select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* 드롭다운 활성화 시 스타일 */
+.custom-select select:focus +::after {
+  content: '\25B2';
+}
+  </style>
+</head>
+<body>
+  <p>오늘은 즐거운 금요일 입니다.</p>
+  <div>곰돌이<span class="accent bg"> 사육사</span></div>
+  <h1 class ="accent">레드향</h1>
+  <a href="http://naver.com" target="_blank">네이버</a>
+  <a href="http://google.com">구글</a>
+  <div class="custom-select">
+    <select>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+  </div>
+</body>
+</html>

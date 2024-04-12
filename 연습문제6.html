@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제6</title>
+  <style>
+    div{
+      margin: 10px 0;
+    }
+    button img{
+      width: 20px;
+    }
+    .button_group{
+      margin:10px 0;
+    }
+    .text label{
+      display: inline-block;
+      width: 70px;
+    }
+  </style>
+</head>
+<body>
+  <div class = text>
+  <fieldset>
+    <legend>기본 정보</legend>
+      <div>
+        <label for="id">아이디</label>
+        <input type="text" id="id" value="jks2024">
+      </div>
+      <div>
+        <label for="pw">패스워드</label>
+        <input type="text" id="pw">
+      </div>
+  </fieldset>
+  <fieldset>
+    <legend>세부 정보</legend>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" id="email" placeholder="@을 넣어야 됩니다.">
+      </div>
+      <div>
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" placeholder="하이픈을 넣지 마세요">
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="number" id="age">
+      </div>
+  </fieldset>
+  </div>
+  <fieldset>
+    <legend>주소 입력</legend>
+    <div style="margin: 0;">
+      <label for="city">도시</label>
+      <select id="city">
+        <option value="강남구" selected>강남구</option>
+      </select>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>성별</legend>
+    <div>
+      <label for="male">남성</label>
+      <input type="radio" name="gender" id="male">
+      <label for="female">여성</label>
+      <input type="radio" name="gender" id="female">
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>직업</legend>
+    <div>
+      <label for="stu">학생</label>
+      <input type="radio" name="jobs" id="stu">
+      <label for="emp">회사원</label>
+      <input type="radio" name="jobs" id="emp">
+      <label for="house">주부</label>
+      <input type="radio" name="jobs" id="house">
+      <label for="no">무직</label>
+      <input type="radio" name="jobs" id="no">
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>취미를 선택하세요</legend>
+    <label for="hel">운동</label>
+    <input type="radio" name="hobby" id="hel">
+    <label for="mu">음악</label>
+    <input type="radio" name="hobby" id="mu" checked>
+    <label for="draw">그림</label>
+    <input type="radio" name="hobby" id="draw">
+  </fieldset>
+  <div>
+    <label for="date">가입일</label>
+    <input style="width: 150px;" type="date">
+  </div>
+  <div></div>
+  <p>소개글</p>
+  <textarea name="intro" cols="50" rows="10"></textarea>
+  <div class="button_group">
+    <button><img src="./image/bear.png" alt="곰돌이"> 제출</button>
+    <button type="reset"><img src="./image/bear.png" alt="곰돌이"> 초기화</button>
+  </div>
+</body>
+</html>
