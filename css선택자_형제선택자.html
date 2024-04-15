@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 ~ h2 {
+      color: red;
+    }
+    h1::before {
+			content: "★";
+			color: red;
+		}
+    a:link {
+        color:orange;
+    }
+    a:visited {
+      color:green;
+    }
+    button{
+      width: 100px;
+    }
+
+    button:active{
+      width: 200px;
+      background-color: red;
+      transition: all 1s ease-in;
+    }
+    button:hover{
+      color:green;
+
+    }
+    .slide {
+      width: 0;
+      background-color: red;
+    }
+
+    #userpw:checked ~ div label[for="userpw"],
+    #userid:checked ~ div label[for="userid"] {
+    border: 2px solid red;
+  }
+
+  #userpw:checked ~ div .slide
+     {
+      width: 200px;
+      transition: all 1s ease-in;
+  }
+  </style>
+</head>
+<body>
+  <h1>test 1</h1>
+  <h2>test 2</h2>
+  <h3>test 3</h3> 
+  <h2>test4</h2>
+
+  <a href="https://www.naver.com" target="_blank">네이버</a>
+  <a href="https://www.google.com">구글</a>
+
+  <button>active</button>
+  
+  <input type="radio" name="h" id="userid">
+  <input type="radio" name="h" id="userpw">
+<div id="label">
+    <label for="userpw">비밀번호<div class="slide"></div></label>
+    <label for="userid">아이디<div class="slide"></div></label>
+</div>
+	
+</body>
+</html>

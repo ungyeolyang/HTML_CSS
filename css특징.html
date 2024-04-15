@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      color:black;
+    }
+    .parent {
+    font-size: 1vw;
+    background-color: rgb(0, 0, 0, 0.7);
+    font-weight: bold;
+    }
+    .child {
+    font-size: 2vw; 
+    font-weight: bolder;
+    }
+    .child-to-child {
+    font-size: 3vw;
+    font-weight: lighter;
+    }
+  </style>  
+</head>
+<body>
+  <div>
+    <p>inherit</p>
+  </div>
+  <div class="parent">
+    <p>부모의 폰트 크기 입니다.</p>
+    <div class="child">
+      <p>자식의 폰트 크기 입니다. </p>
+      <div class="child-to-child">
+        <p>자식의 자식 폰트 크기 입니다. </p>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
