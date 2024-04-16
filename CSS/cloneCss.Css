@@ -175,7 +175,7 @@ header .bg a{
   width: 100%;
 }
 
-header #hd_nav {
+header #hd_nav{
   position: absolute;
   box-sizing: border-box;
   width: 100%;
@@ -184,7 +184,7 @@ header #hd_nav {
   color: #f8f8f899;
   font-size: 13px;
   background-color:rgb(00,00,00,0.3);
-  padding: 0 35px;
+  padding: 0 70px;
   z-index: 10;
 }
 
@@ -328,6 +328,7 @@ section #sc_bx_pc a{
   align-items: center;
   border-radius: 10px;
   height: 114px;
+  margin-bottom: 20px;
 }
 
 section #sc_bx_pc a:hover{
@@ -348,10 +349,70 @@ section #sc_bx_pc span{
 section #sc_bx_pc strong{
   font-size: 17px;
 }
+article {
+  position: relative;
+}
+
+article #ac_bx{
+  display: flex;
+  background-color: #1e2023;
+  height: 406px;
+  margin: 82px;
+}
+
+article #ac_nav {
+  padding: 15px 0;
+}
+
+article #ac_nav ul{
+  font-size: 12px;
+  display: flex;
+  color: #CCC;
+}
+
+article #ac_nav li{
+width: calc(100% / 3);
+}
+
+article #ac_nav h1{
+  font-size: 20px;
+  padding-left: 40px;
+  color: #fff;
+}
+
+article > a {
+  position: absolute;
+  font-size: 12px;
+  color: #171717;
+  top: 105%;
+  padding-left: 82px;
+}
 
 article #ac_nav li:hover {
   color: royalblue;
 }
+
+footer {
+  box-sizing: border-box;
+  background-color: #1e2023;
+  font-size: 11px;
+  color: #FFFFFF99;
+  padding: 64px 64px 94px;
+}
+
+footer #ft_bx_copy {
+  margin-bottom: 13px;
+}
+
+footer #ft_copy_add {
+  color: #FFFFFF80;
+}
+
+footer table {
+  font-size: 12px;
+  margin-top: 50px;
+}
+
 
 
 
