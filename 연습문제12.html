@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .container > div{
+      display: flex;
+      justify-content: center;
+    }
+    .img {
+      position: relative;
+      margin: 10px;
+      overflow: hidden;
+    }
+
+    .img:hover {
+      .info{
+        background-color: rgb(0,0,0,0.6);
+        transform: translateY(-200px);
+        
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 100%;
+      background-color: rgb(0,0,0,0);
+      z-index: 1;
+    }
+
+    img {
+      z-index: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>신상품 목록</h1>
+    <div>
+      <div class="img" >
+        <img src="./image/prod1.jpg" alt="">
+        <div class="info">
+          <h1>상품1</h1>
+          <p>상품1 설명 텍스트</p>
+          <p>가격 : 12,345</p>
+        </div>
+      </div>
+      <div class="img">
+        <img src="./image/prod2.jpg" alt="">
+        <div class="info">
+          <h1>상품2</h1>
+          <p>상품2 설명 텍스트</p>
+          <p>가격 : 12,345</p>
+        </div>
+      </div>
+      <div class="img">
+        <img src="./image/prod3.jpg" alt="">
+        <div class="info">
+          <h1>상품3</h1>
+          <p>상품3 설명 텍스트</p>
+          <p>가격 : 12,345</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

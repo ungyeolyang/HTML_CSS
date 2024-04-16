@@ -97,10 +97,6 @@ aside #as_nav li:hover {
   transform: translateX(6px);
 }
 
-article #ac_nav li:hover {
-  color: royalblue;
-}
-
 header {
   position: relative;
   overflow: hidden;
@@ -123,10 +119,6 @@ header {
   background-color: #ffffff5d;
   border-bottom: 2px solid red;
 } 
-
-header input:checked ~ label {
-  border-bottom: 2px solid red;
-}
 
 #arthdal-banner:hover,
 #level-banner:hover,
@@ -204,24 +196,163 @@ header #hd_nav label {
   height: 100%;
 }
 
-.slide {
-  width: 0;
-  height: 100%;
-  background-color: #ffffff; /* 로딩 효과 색상 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: fillProgress 2s linear forwards;
+section {
+  display: flex;
+  padding: 40px;
 }
 
-@keyframes fillProgress {
-  0% {
-    width: 0;
+section #sc_bx_title {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 40px;
+}
+
+section #sc_bx_title h1{
+  font-size: 24px;
+  color: #2F2F2F;
+}
+
+
+section #sc_bx_title a{
+  font-size: 12px;
+  color: #000000CC;
+}
+
+section #sc_bx_mob ul {
+  display: flex;
+  margin: 0;
+}
+
+section #sc_bx_mob li {
+  margin-right: 24px;
+  width: 202px;
+}
+
+
+section #sc_bx_mob span {
+  font-size: 12px;
+  color: #212121;
+}
+
+section #sc_bx_mob span strong {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+section #sc_bx_mob a{
+  display: flex;
+}
+
+section #sc_bx_mob li > div{
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+section #sc_bx_mob li > div:hover {
+  transition-duration:0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 30px rgb(0, 0, 0,0.6);
+  .sc_bg{
+    background-image: linear-gradient(to top, black,rgba(0,0,0,0.4));
   }
-  100% {
-    width: 100%;
+  .sc_bg > a {
+    scale: 1;
+    top: 30%;
+    left: 15%;
+  }
+
+  .sc_bg span{
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -40px;
   }
 }
+
+
+section .sc_bg {
+  position: absolute;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top, black, rgba(0,0,0,0.3), rgba(0,0,0,0) ,rgba(0,0,0,0));
+  z-index: 2;
+}
+
+section #sc_bx_mob li a > img{
+  position: relative;
+  border-radius: 10px;
+  margin-right: 12px;
+  margin-bottom: 52px;
+}
+
+section .sc_bg a {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 65%;
+  left:-20px;
+  scale: 0.55;
+}
+
+section .sc_bg a > span {
+  display: none;
+}
+
+section .sc_bg a span img{
+  margin-left: 10px;
+  padding-top: 2px;
+}
+
+section #sc_bx_pc {
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: right;
+}
+
+section #sc_bx_pc h1{
+  font-size: 24px;
+  color: #2F2F2F;
+  padding: 0 0 0 40px;
+}
+
+section #sc_bx_pc a{
+  display:flex;
+  background-color: rgb(247, 247, 247);
+  justify-content: left;
+  align-items: center;
+  border-radius: 10px;
+  height: 114px;
+}
+
+section #sc_bx_pc a:hover{
+  transition-duration:0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 30px rgb(0, 0, 0,0.6);
+}
+
+section #sc_bx_pc img{
+  border-radius: 10px 0 0 10px ;
+}
+
+section #sc_bx_pc span{
+  font-size: 14px;
+  padding: 30px 0 30px 30px;
+}
+
+section #sc_bx_pc strong{
+  font-size: 17px;
+}
+
+article #ac_nav li:hover {
+  color: royalblue;
+}
+
 
 
 
