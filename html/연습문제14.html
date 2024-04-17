@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    *{
+      margin: 0;
+    }
+    .post {
+      display: inline-flex;
+      position: relative;
+      font-family: "Nanum Pen Script", cursive;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffff99;
+      padding: 18px;
+      transform: rotate(10deg);
+      margin: 40px;
+      overflow: hidden;
+    }
+
+    h1{
+      font-weight: normal;
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+    span{
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    span:last-child
+    {
+      margin: 0;
+    }
+    .bx1 {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: rgb(255, 255, 255);
+      transform: rotate(-30deg);
+      bottom: -55px;
+      right: -25px;
+      z-index: 1;
+    }
+
+    .bx2 {
+      position: absolute;
+      transform: skew(-20deg);
+      bottom: -20px;
+      right: -10px;
+      width: 70px;
+      height: 70px;
+      background-color: #fafac9;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="post">
+    <h1>To. 남편</h1>
+    <span>여보~ 오늘 급하게 먼저 출근해야 해서 <br>
+    인사도 못 하고 먼저 나가요~</span>
+    <span>아침 굶지 말고 냉장고에 있는 반찬<br>
+    전자레인지에 데워서 챙겨 먹고 나가요~!</span>
+    <span>그럼 오늘 하루도 힘내고 이따 저녁에 봐요~<br>
+    화이팅~!</span>
+    <div class="bx1"></div>
+    <div class="bx2"></div>
+  </div>
+</body>
+</html>

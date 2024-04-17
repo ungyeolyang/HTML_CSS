@@ -15,6 +15,7 @@ body {
 
 #main {
   box-sizing: border-box;
+  width: 100%;
   overflow: auto;
   padding: 0 0 0 240px;
 }
@@ -27,7 +28,12 @@ aside {
   background-color: #fff;
   box-sizing: border-box;
   height: 100%;
-  padding: 70px 20px;
+  padding: 70px 25px 30px 25px;
+  z-index: 0;
+}
+
+#body{
+  box-shadow:inset 0px 0px 70px #dbdbf3;
 }
 
 aside #as_logo {
@@ -38,6 +44,8 @@ aside #as_logo {
 }
 
 aside #as_bx_login {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
   width: calc(100%-1px);
@@ -111,15 +119,6 @@ header {
   display: block;
 }
 
-#arthdal-radio:checked ~ div > label[for="arthdal-radio"], 
-#level-radio:checked ~ div > label[for="level-radio"], 
-#seven-radio:checked ~ div > label[for="seven-radio"], 
-#raven-radio:checked ~ div > label[for="raven-radio"],  
-#winjoy-radio:checked ~ div > label[for="winjoy-radio"]{
-  background-color: #ffffff5d;
-  border-bottom: 2px solid red;
-} 
-
 #arthdal-banner:hover,
 #level-banner:hover,
 #seven-banner:hover,
@@ -179,16 +178,23 @@ header #hd_nav{
   position: absolute;
   box-sizing: border-box;
   width: 100%;
-  top: 84.3%;
+  top: 84.5%;
   height: 64px;
-  color: #f8f8f899;
+  color: #fff;
   font-size: 13px;
   background-color:rgb(00,00,00,0.3);
-  padding: 0 70px;
+  padding: 0 120px 0 105px;
   z-index: 10;
+  opacity: 0.6;
+}
+
+header #hd_nav:hover {
+  opacity: 0.9;
 }
 
 header #hd_nav label {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   width: calc((100% - 20px) / 5);
   justify-content: center;
@@ -196,12 +202,22 @@ header #hd_nav label {
   height: 100%;
 }
 
+#arthdal-radio:checked ~ div > label[for="arthdal-radio"], 
+#level-radio:checked ~ div > label[for="level-radio"], 
+#seven-radio:checked ~ div > label[for="seven-radio"], 
+#raven-radio:checked ~ div > label[for="raven-radio"],  
+#winjoy-radio:checked ~ div > label[for="winjoy-radio"]{
+  border-bottom: 4px solid red;
+  background-color: #ffffff31;
+} 
+
 section {
   display: flex;
-  padding: 40px;
+  padding: 40px 75px 60px;
 }
 
 section #sc_bx_title {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 0 0 40px;
@@ -212,9 +228,13 @@ section #sc_bx_title h1{
   color: #2F2F2F;
 }
 
-
 section #sc_bx_title a{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
+  right: 25px;
   color: #000000CC;
 }
 
@@ -246,7 +266,7 @@ section #sc_bx_mob a{
 section #sc_bx_mob li > div{
   position: relative;
   margin-bottom: 16px;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 section #sc_bx_mob li > div:hover {
@@ -273,10 +293,9 @@ section #sc_bx_mob li > div:hover {
   }
 }
 
-
 section .sc_bg {
   position: absolute;
-  border-radius: 10px;
+  border-radius: 7px;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to top, black, rgba(0,0,0,0.3), rgba(0,0,0,0) ,rgba(0,0,0,0));
@@ -285,7 +304,7 @@ section .sc_bg {
 
 section #sc_bx_mob li a > img{
   position: relative;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-right: 12px;
   margin-bottom: 52px;
 }
@@ -313,6 +332,7 @@ section #sc_bx_pc {
   box-sizing: border-box;
   flex-direction: column;
   align-items: right;
+  margin-left: 30px;
 }
 
 section #sc_bx_pc h1{
@@ -326,7 +346,7 @@ section #sc_bx_pc a{
   background-color: rgb(247, 247, 247);
   justify-content: left;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 7px;
   height: 114px;
   margin-bottom: 20px;
 }
@@ -338,30 +358,35 @@ section #sc_bx_pc a:hover{
 }
 
 section #sc_bx_pc img{
-  border-radius: 10px 0 0 10px ;
+  border-radius: 7px 0 0 7px ;
 }
 
 section #sc_bx_pc span{
   font-size: 14px;
-  padding: 30px 0 30px 30px;
+  padding: 30px;
+  padding-right: 40px;
 }
 
 section #sc_bx_pc strong{
   font-size: 17px;
 }
+
 article {
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 article #ac_bx{
-  display: flex;
-  background-color: #1e2023;
   height: 406px;
   margin: 82px;
 }
 
 article #ac_nav {
+  background-color: #1e2023;
+  width: 368px;
+  flex-direction: column;
   padding: 15px 0;
+  border-radius: 0 7px 7px 0;
 }
 
 article #ac_nav ul{
@@ -371,25 +396,47 @@ article #ac_nav ul{
 }
 
 article #ac_nav li{
-width: calc(100% / 3);
+  width:100%;
+}
+article #ac_nav ul:last-child > li{
+  width:calc(100%/3);
 }
 
 article #ac_nav h1{
   font-size: 20px;
   padding-left: 40px;
+  padding-bottom: 45px;
   color: #fff;
 }
 
-article > a {
-  position: absolute;
-  font-size: 12px;
-  color: #171717;
-  top: 105%;
-  padding-left: 82px;
+article #ac_img{
+  width: 971px;
+  height: 406px;
+  overflow: hidden;
+  border-radius: 7px 0 0 7px;
+}
+
+article #ac_img  img:hover {
+  transition-duration:0.3s;
+  scale: 1.05;
 }
 
 article #ac_nav li:hover {
   color: royalblue;
+}
+
+#ac_add{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #171717;
+  padding-left: 110px;
+  margin-top: 25px;
+  padding-bottom: 100px;
+
+  img {
+    margin-right: 10px;
+  }
 }
 
 footer {
@@ -400,12 +447,61 @@ footer {
   padding: 64px 64px 94px;
 }
 
+footer #ft_bx_logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+footer .select {
+  position: absolute;
+  right: 200px;
+  bottom: 29px;
+  opacity: 0;
+}
+
+footer label {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
+}
+
+footer #ft_bx_logo label{
+  background-color: #000;
+  padding: 7px 100px 7px 15px;
+}
+
+footer #ft_bx_logo .select > .option {
+  background-color: #000;
+  padding: 7px 110px 7px 15px;
+}
+
+footer .select > .option{
+  border-bottom :1px solid rgba(192, 192, 192, 0.253);
+}
+
+footer .select a:hover{
+  color: #CCC;
+}
+
+footer input:checked ~.select {
+  opacity: 1;
+}
+
 footer #ft_bx_copy {
   margin-bottom: 13px;
 }
 
 footer #ft_copy_add {
   color: #FFFFFF80;
+}
+
+footer #ft_nav {
+  padding-top: 50px;
+  span{
+    margin: 0 10px;
+  }
 }
 
 footer table {

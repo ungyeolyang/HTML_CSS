@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+    .log_in {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 304px;
+      height: 390px;
+      border: 1px solid grey;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .logo {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #504444;
+      height: 44px;
+      width: 228px;
+      margin-top: 28px;
+      border: 1px solid black;
+      img {
+        margin-right: 5px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      color: #504444;
+    }
+
+    input{
+      width: 228px;
+      height: 44px;
+      box-sizing: border-box;
+      background-color: #eaeaea;
+      margin: 12px 0;
+      padding-left: 12px;
+      border: none;
+    }
+
+    button {
+      background-color: #373f3c;
+      width: 228px;
+      height: 44px;
+      font-size: 14px;
+      color: #fff;
+      border: none;
+      margin: 12px 0;
+    }
+
+    a{
+      font-size: 14px;
+      color: #2C3432;
+      text-decoration: none;
+      margin: 12px 0;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="log_in">
+    <div class="logo">
+      <img src="../image/구글.png" alt="">
+      Log in with Google
+    </div>
+    <p>OR</p>
+    <input type="text" placeholder="Username">
+    <input type="text" placeholder="Password">
+    <button>LOGIN</button>
+    <a href="#">Forgot your password?</a>
+  </div>
+</body>
+</html>
