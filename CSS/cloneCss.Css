@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 a {
   text-decoration: none;
   color:inherit;
@@ -11,6 +13,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 #main {
@@ -44,31 +47,34 @@ aside #as_logo {
 }
 
 aside #as_bx_login {
-  display: flex;
-  flex-direction: column;
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
   width: calc(100%-1px);
-  padding: 20px 30px;
+  padding: 15px 60px 20px 15px;
   margin-bottom: 20px;
+  align-items: left;
 }
 
-aside #as_login {
+aside #as_bx_login > a {
   display: flex;
   align-items: center;
   font-size: 12px;
   color: #7e7e7e;
   margin-bottom: 13px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-aside #as_login img {
+aside #as_bx_login a img {
   margin-right: 13px;
 }
 
 aside #as_login_add {
+  display: flex;
   font-size: 10px;
   color: #7e7e7e;
+}
+aside #as_login_add > span {
+  margin:0 5px;
 }
 
 aside #as_login_add a span {
@@ -77,7 +83,6 @@ aside #as_login_add a span {
 aside #as_nav {
   box-sizing: border-box;
   font-size: 13px;
-  font-weight: bold;
   color: #424242f2;
   padding: 16px;
 }
@@ -103,6 +108,7 @@ aside #as_nav li a span{
 aside #as_nav li:hover {
   transition-duration:0.3s;
   transform: translateX(6px);
+  font-weight: bolder;
 }
 
 header {
@@ -182,6 +188,7 @@ header #hd_nav{
   height: 64px;
   color: #fff;
   font-size: 13px;
+  font-weight: bold;
   background-color:rgb(00,00,00,0.3);
   padding: 0 120px 0 105px;
   z-index: 10;
