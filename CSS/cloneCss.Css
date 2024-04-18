@@ -222,7 +222,6 @@ header #hd_nav label {
 section {
   box-sizing: border-box;
   display: flex;
-  /* flex-wrap: wrap; */
   padding: 40px 60px 60px;
 }
 
@@ -256,7 +255,6 @@ section #sc_bx_mob{
 
 section #sc_bx_mob ul {
   display: flex;
-  /* flex-wrap: wrap; */
   margin: 0;
 }
 
@@ -348,6 +346,12 @@ section .sc_bg a span img{
   padding-top: 2px;
 }
 
+section #sc_bx_pc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 section #sc_bx_pc ul{
   display: flex;
   flex-wrap: wrap;
@@ -396,14 +400,13 @@ section #sc_bx_pc strong{
 }
 
 article {
-  height: auto;
+  display: flex;
   padding:0 0 0 100px ;
   box-sizing: border-box;
 }
 
 article #ac_bx {
   display: flex;
-  /* flex-wrap: wrap; */
   height: 406px;
   border-radius: 7px 0 0 7px;
 }
@@ -545,6 +548,7 @@ footer table {
 @media(max-width:1290px) {
   *{
     margin: 0;
+    padding: 0;
   }
 
   h1 {
@@ -562,6 +566,7 @@ footer table {
   section {
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 0;
 
     #sc_bx_pc ul{ 
       width: 100%;
@@ -569,7 +574,71 @@ footer table {
       justify-content: space-around;
     }
   }
-}
+  article {
+    height: 600px;
+    justify-content: center;
+    padding: 0;
+
+    #ac_bx {
+    flex-wrap: wrap;
+    justify-content: center;
+      
+      img {
+        scale: 1;
+        border-radius:7px 0 7px 0;
+      }
+
+      a {
+        scale: 0.9;
+      }
+
+      #ac_nav {
+        border-radius:0 0 7px 7px;
+        padding-left: 20px;
+        width : 873.9px;
+        height: 200px;
+        
+        h1 {
+          margin: 0;
+          padding: 10px 0 20px;
+        }
+
+        ul {
+          justify-content: center;
+        }
+
+        li {
+          width: 10%;
+        }
+
+        ul:last-child {
+          justify-content: left;
+        }
+      }
+    }
+    
+    #ac_bx img:hover {
+      transition-duration:0.3s;
+      scale: 0.95;
+    }
+  }
+   #ac_add {
+    display: flex;
+    justify-content: center;
+    scale: 1.4;
+
+    a{
+      margin: 0;
+      padding: 0;
+      padding-bottom: 20px;
+    }
+   }
+   footer {
+    display: flex;
+    justify-content: center;
+   }
+  }          
+
 
 
 
