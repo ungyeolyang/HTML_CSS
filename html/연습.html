@@ -2,51 +2,32 @@
 <html>
 <head>
 <style>
-.container {
-  position: relative;
-  background-color: lightblue; /* 전체 배경 색상 */
-  overflow: hidden; /* 요소 내의 내용이 넘치지 않도록 설정 */
-  height: 200px;
-  width: 200px;
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%; /* 초기 너비는 0으로 설정 */
-  height: 100%;
-  background-color: black; /* 검은색 배경 */
-  animation: loading 6s 1 linear; /* 애니메이션 적용 */
-  animation-play-state:paused;
-}
-
-@keyframes loading {
-  from {
-    width: 0%; /* 애니메이션 시작 너비 */
+  .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: black;
   }
-  to {
-    width: 100%; /* 애니메이션 종료 너비 */
+  .back {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -100px;
+    background-color: red;
   }
-}
+
+  .box:hover {
+    scale: 1.1;
+  }
+
+  .box:active > .back{
+    transform: translate(100px);
+  }
 </style>
 </head>
 <body>
- <input type="checkbox" id="checkbox" onchange="startAnimation()"> <!-- 체크박스 추가 -->
- <label for="checkbox">애니메이션 시작</label>
- <div class="container"></div>
-
-<script>
-function startAnimation() {
-  var checkbox = document.getElementById('checkbox');
-  var container = document.querySelector('.container::before');
-  if (checkbox.checked) {
-    container.style.animationPlayState = "running";
-  } else {
-    container.style.animationPlayState = "paused";
-  }
-}
-</script>
+  <div class="boxes">
+    <div class = "box"><div class="back"></div></div>
+  </div>
 </body>
 </html>
