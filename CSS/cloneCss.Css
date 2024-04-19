@@ -110,6 +110,22 @@ aside #as_nav li:hover {
   transform: translateX(6px);
   font-weight: bolder;
 }
+#menu {
+  display: none;
+}
+
+#menu_bx {
+  display: none;
+}
+
+
+#head {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+}
 
 header {
   position: relative;
@@ -202,7 +218,6 @@ header #hd_nav:hover {
 header #hd_nav label {
   position: relative;
   cursor: pointer; 
-  overflow: hidden;
   display: inline-flex;
   width: calc((100% - 20px) / 5);
   justify-content: center;
@@ -559,10 +574,133 @@ footer table {
     display: none;
   }
 
+  #menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    z-index: 11;
+
+    svg {
+      position: absolute;
+    }
+  }
+
+  #menu:active {
+    display: none;
+
+   ~#head{
+      display: none;
+    }
+
+    ~ #menu_bx {
+      transition-duration: 0.5s;
+      transform: translateX(300px);
+    }
+  }
+
+  #menu_bx {
+    width: 300px;
+    height: 100%;
+    left: -300px;
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 30px 30px 0;
+    
+    #as_logo {
+      padding:40px 0 20px;
+    }
+
+    #as_nav {
+      li {
+        padding: 20px;
+        color: #424242F2;
+        border-bottom:1px solid #42424238;
+      }
+
+      li:last-child{
+        border: none;
+      }
+
+      a{
+        display: flex;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    #as_login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 165px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid #42424238;
+      margin: 10px 0;
+    }
+
+    #as_login_add{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 165px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid #42424238;
+      margin: 10px 0;
+    }
+  }
+
+  #menu_bx:hover {
+    #menu{
+      display: none;
+    }
+    transform: translateX(300px);
+
+    ~#head{
+      display: none;
+    }
+  }
+
+  #head {
+    position: relative;
+    display: flex;
+  }
+
   #main {
     padding: 0;
   }
 
+  header {
+    height: 350px;
+    #arthdal-banner,
+    #level-banner,
+    #seven-banner,
+    #raven-banner,
+    #winjoy-banner {
+      background-size: min(190%);
+    }
+
+    #hd_nav {
+      top: 80%;
+    }
+
+  }
+  
   section {
     flex-wrap: wrap;
     justify-content: center;
@@ -575,7 +713,7 @@ footer table {
     }
   }
   article {
-    height: 600px;
+    height: 620px;
     justify-content: center;
     padding: 0;
 
@@ -594,7 +732,7 @@ footer table {
 
       #ac_nav {
         border-radius:0 0 7px 7px;
-        padding-left: 20px;
+        padding:15px 40px;
         width : 873.9px;
         height: 200px;
         
@@ -603,42 +741,52 @@ footer table {
           padding: 10px 0 20px;
         }
 
-        ul {
-          justify-content: center;
-        }
-
         li {
-          width: 10%;
+          width: 11%;
+          text-align: center;
         }
 
-        ul:last-child {
-          justify-content: left;
-        }
       }
     }
     
     #ac_bx img:hover {
       transition-duration:0.3s;
-      scale: 0.95;
+      scale: 1.05;
     }
   }
    #ac_add {
     display: flex;
     justify-content: center;
-    scale: 1.4;
 
     a{
       margin: 0;
-      padding: 0;
-      padding-bottom: 20px;
+      padding: 0; 
+      padding: 7px 0 15px;
     }
    }
    footer {
     display: flex;
     justify-content: center;
+    padding: 68px 0;
+
+    .select, label {
+      right: 0;
+    }
+
+    p{
+      text-align: center;
+    }
+
+    #ft_nav{
+      display: flex;
+      justify-content: center;
+    }
    }
   }          
 
+  @media(max-width:1000px){
+
+  }
 
 
 
